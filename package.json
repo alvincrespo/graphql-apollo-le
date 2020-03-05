@@ -1,0 +1,12 @@
+{
+  "name": "life-expectancy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alvin Crespo",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "private": true
+}

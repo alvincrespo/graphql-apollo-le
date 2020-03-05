@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "dev": "TS_NODE_TRANSPILE_ONLY=true nodemon -e ts --exec \"ts-node -r dotenv/config  -r ./index.ts\""
+  },
+  "dependencies": {
+    "apollo-datasource": "^0.7.0",
+    "apollo-datasource-rest": "^0.8.0",
+    "apollo-link": "^1.2.13",
+    "apollo-link-http": "^1.5.16",
+    "apollo-server": "^2.11.0",
+    "cross-env": "5.0.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0",
+    "pg": "^7.18.2",
+    "typeorm": "^0.2.24"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}

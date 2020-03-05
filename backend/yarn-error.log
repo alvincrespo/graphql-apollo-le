@@ -1,0 +1,56 @@
+Arguments: 
+  /Users/alvincrespo/.nvm/versions/node/v12.16.1/bin/node /Users/alvincrespo/.nvm/versions/node/v12.16.1/bin/yarn add dotenv
+
+PATH: 
+  /Users/alvincrespo/.nvm/versions/node/v12.16.1/bin:/usr/local/opt/postgresql@9.6/bin:/Users/alvincrespo/.yarn/bin:/Users/alvincrespo/.rbenv/shims:/Users/alvincrespo/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/opt/openssl/bin:/usr/local/opt/asdf/bin:/usr/local/opt/asdf/shims:/Users/alvincrespo/.nvm/versions/node/v13.3.0/bin:/Users/alvincrespo/.nvm/versions/node/v12.16.1/bin:/usr/local/opt/postgresql@9.6/bin:/Users/alvincrespo/.yarn/bin:/Users/alvincrespo/.rbenv/shims:/Users/alvincrespo/.rbenv/bin:/Users/alvincrespo/.go/bin:/usr/local/opt/go/libexec/bin:/Users/alvincrespo/Library/Android/sdk/tools:/Users/alvincrespo/Library/Android/sdk/tools/bin:/Users/alvincrespo/Library/Android/sdk/platform-tools:/Users/alvincrespo/Library/Android/sdk/emulator:/Users/alvincrespo/workspace/echobind/blueswireless/hub/tools/testcard:/Users/alvincrespo/workspace/echobind/blueswireless/hub/note-go/tools/notecard:/Users/alvincrespo/Library/Android/sdk/tools:/Users/alvincrespo/Library/Android/sdk/tools/bin:/Users/alvincrespo/Library/Android/sdk/platform-tools:/Users/alvincrespo/Library/Android/sdk/emulator:/Users/alvincrespo/workspace/echobind/blueswireless/hub/tools/testcard:/Users/alvincrespo/workspace/echobind/blueswireless/hub/note-go/tools/notecard
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  12.16.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/alvincrespo/workspace/personal/life-expectancy/backend/package.json: Unexpected token } in JSON at position 208
+      at JSON.parse (<anonymous>)
+      at /Users/alvincrespo/.nvm/versions/node/v12.16.1/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/alvincrespo/.nvm/versions/node/v12.16.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/alvincrespo/.nvm/versions/node/v12.16.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "engines": {
+      "node": "12.x"
+    },
+    "scripts": {
+      "dev": "TS_NODE_TRANSPILE_ONLY=true nodemon -e ts --exec \"ts-node -r dotenv/config  -r ./index.ts\"",
+    },
+    "dependencies": {
+      "apollo-datasource": "^0.7.0",
+      "apollo-datasource-rest": "^0.8.0",
+      "apollo-link": "^1.2.13",
+      "apollo-link-http": "^1.5.16",
+      "apollo-server": "^2.11.0",
+      "cross-env": "5.0.5",
+      "graphql": "^14.6.0",
+      "pg": "^7.18.2",
+      "typeorm": "^0.2.24"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.2",
+      "ts-node": "^8.6.2",
+      "typescript": "^3.8.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
