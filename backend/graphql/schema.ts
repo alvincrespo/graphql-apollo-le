@@ -11,6 +11,15 @@ export const typeDefs = gql`
   }
 
   type Query {
-    all: [Result]!
+    all(
+      """
+      The state to filter by.
+      """
+      state: String
+      """
+      The life expectancy to search by.
+      """
+      expectancy: String
+    ): [Result]!
   }
 `;

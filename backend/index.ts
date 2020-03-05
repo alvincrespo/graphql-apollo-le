@@ -2,6 +2,7 @@ import { ApolloServer } from "apollo-server";
 import { typeDefs } from "./graphql/schema";
 import resolvers from "./resolvers";
 import LifeExpectancyAPI from "./datasources/LifeExpectancyRESTAPI";
+require("dotenv").config();
 
 const dataSources = (): any => {
   return {
