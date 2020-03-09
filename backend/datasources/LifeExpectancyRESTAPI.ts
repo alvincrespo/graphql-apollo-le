@@ -15,11 +15,11 @@ class LifeExpectancyRESTAPI extends RESTDataSource {
   async all(filters: any) {
     const query: any = {};
 
-    if (filters.state !== "") {
+    if (filters.state) {
       query.state_name = filters.state;
     }
 
-    if (filters.expectancy !== "") {
+    if (filters.expectancy) {
       query.$where = `le >= ${filters.expectancy}`;
     }
 

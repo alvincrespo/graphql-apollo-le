@@ -1,7 +1,13 @@
+import "reflect-metadata";
+import { createConnection } from "typeorm";
 import { ApolloServer } from "apollo-server";
-import { typeDefs } from "./graphql/schema";
-import resolvers from "./resolvers";
+import { buildSchema } from "type-graphql";
+
+import { BookResolver } from "./resolvers/BookResolver";
+import { LifeExpectancyResolver } from "./resolvers/LifeExpectancyResolver";
+
 import LifeExpectancyAPI from "./datasources/LifeExpectancyRESTAPI";
+
 require("dotenv").config();
 
 const dataSources = (): any => {
@@ -10,12 +16,14 @@ const dataSources = (): any => {
   };
 };
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  dataSources
-});
-
-server.listen().then(({ url }) => {
+async function main() {
+  await createConnection();
+  const schema = await buildSchema({
+    resolvers: [BookResolver, LifeExpectancyResolver]
+  });
+  const server = new ApolloServer({ schema, dataSources });
+  const { url } = await server.listen(4000);
   console.log(`🚀 Server ready at ${url}`);
-});
+}
+
+main();
