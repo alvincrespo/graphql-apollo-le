@@ -4,6 +4,7 @@
   "engines": {
     "node": "12.x"
   },
+  "type": "module",
   "scripts": {
     "dev": "TS_NODE_TRANSPILE_ONLY=true nodemon -e ts --exec \"ts-node -r dotenv/config  -r ./index.ts\""
   },
@@ -13,6 +14,7 @@
     "apollo-link": "^1.2.13",
     "apollo-link-http": "^1.5.16",
     "apollo-server": "^2.11.0",
+    "bcryptjs": "^2.4.3",
     "cross-env": "5.0.5",
     "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
@@ -22,6 +24,7 @@
     "typeorm": "^0.2.22"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"

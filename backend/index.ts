@@ -4,6 +4,7 @@ import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 
 import { BookResolver } from "./resolvers/BookResolver";
+import { UserResolver } from "./resolvers/UserResolver";
 import { LifeExpectancyResolver } from "./resolvers/LifeExpectancyResolver";
 
 import LifeExpectancyAPI from "./datasources/LifeExpectancyRESTAPI";
@@ -19,7 +20,7 @@ const dataSources = (): any => {
 async function main() {
   await createConnection();
   const schema = await buildSchema({
-    resolvers: [BookResolver, LifeExpectancyResolver]
+    resolvers: [BookResolver, LifeExpectancyResolver, UserResolver]
   });
   const server = new ApolloServer({ schema, dataSources });
   const { url } = await server.listen(4000);
